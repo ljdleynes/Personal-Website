@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ljdleynes</title>
+    <script src="https://kit.fontawesome.com/a9a7e32a9e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main-style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                <li><a href="#" class="tabBtn" data-index="0">Home</a></li>
+                <li><a href="#" class="tabBtn" data-index="1">Skills</a></li>
+                <li><a href="#" class="tabBtn" data-index="2">Projects</a></li>
+                <li><a href="#" class="resume-btn" onclick="window.open('LEYNES_RESUME.pdf')">Download Resume</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#" class="tabBtn active" data-index="0">Home</a></li>
+                <li class="hideOnMobile"><a href="#" class="tabBtn" data-index="1">Skills</a></li>
+                <li class="hideOnMobile"><a href="#" class="tabBtn" data-index="2">Projects</a></li>
+                <li class="hideOnMobile"><a href="#" class="resume-btn" onclick="window.open('LEYNES_RESUME.pdf')">Download Resume</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="currentDiv active">
+        <div class="hero-img">
+        </div>
+        <div class="social-icons">
+            <ul>
+                <li class="icon facebook">
+                    <span class="tooltip">Facebook</span>
+                    <a href="https://www.facebook.com/jaydeee5"><span><i class="fa-brands fa-facebook"></i></span></a>
+                </li>
+                <li class="icon linkedin">
+                    <span class="tooltip">Linkedin</span>
+                    <a href="https://www.linkedin.com/in/lianne-leynes-b4412129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><span><i class="fa-brands fa-linkedin"></i></span></a>
+                </li>
+                <li class="icon github">
+                    <span class="tooltip">Github</span>
+                    <a href="https://github.com/ljdleynes"><span><i class="fa-brands fa-github"></i></span></a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <div class="currentDiv">
+        <div class="skillSection">
+            <!-- Content for Skills section -->
+        </div>
+    </div>
+    <div class="currentDiv">
+        <div class="projectsSection">
+            <!-- Content for Projects section -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier", monospace ;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #FAF9F6;
+}
+
+header {
+    position: relative;
+    padding: 0.2rem;
+    background-color: #FAF9F6;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1600px;
+    margin: 1rem auto;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color:black;
+}
+
+nav a:hover {
+    background-color: #f0f0f0;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow:  -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+.resume-btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    background-color: #637E76;
+}
+
+.currentDiv {
+    display: none;
+}
+
+.currentDiv.active {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*MAIN SECTION*/
+main {
+    position: relative;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 100%;
+    max-width: 100rem;
+    height:40vw;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(try.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+.social-icons {
+    width: 100%;
+    max-width: 600px;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: black;
+}
+
+.social-icons ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.icon {
+    position: relative;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: pointer;
+    box-shadow:  0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition:  all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+    position: absolute;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px 8px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+    bottom: 60px;
+    opacity: 1;
+}
+
+.icon:hover span,
+.icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.facebook:hover,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before {
+    color: #ffffff;
+    background: #1877F2;
+}
+
+.linkedin:hover,
+.linkedin:hover .tooltip,
+.linkedin:hover .tooltip::before {
+    color: #ffffff;
+    background: #1B4242;
+}
+
+.github:hover,
+.github:hover .tooltip,
+.github:hover .tooltip::before {
+    color: #ffffff;
+    background: #333333;
+}
+
+/*SKILL SECTION*/
+
+.skillSection {
+    border: solid;
+}
+
+@media (max-width: 1000px) {
+    .hero-img {
+        height: 80vh;
+        background-image: url(try2.png);
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
